@@ -21,7 +21,42 @@ public class Main {
      * @author
      * @param args
      */
-    public static void InputValidate(String[] args) {
+    public static String InputValidate(String[] args)
+    {
+        String param ="";
+        int fileNum=0;
+        for (int i=0; i<args.length; i++)
+        {
+            if ( args[i].matches("\\*[.](txt)$") )
+            {
+                param = args[i];
+                fileNum++;
+            }
+            else
+            {
+                System.out.println("请按照要求输入参数，*.txt !");
+                return "";
+            }
+//            if( fileNum == 1)
+//            {
+//                return param;
+//            }
+//            else
+//            {
+//                System.out.println("输入文件数量不为一，请重新输入！");
+//                return "";
+//            }
+
+        }
+        if( fileNum == 1)
+        {
+            return param;
+        }
+        else
+        {
+            System.out.println("输入文件数量不为一，请检查并重新输入！");
+            return "";
+        }
 
     }
 
@@ -32,10 +67,10 @@ public class Main {
      * @return ArrayList<WordInfo>
      */
     public static ArrayList<WordInfo> countFrequency(String filename) {
-        ArrayList<WordInfo> wordInfos=new ArrayList<>();
-        Pattern pattern=Pattern.compile("[a-zA-Z]+-?[a-zA-Z]*");
-        String text=Main.readFile(filename);
-        Matcher matcher=pattern.matcher(text);
+        ArrayList<WordInfo> wordInfos = new ArrayList<>();
+        Pattern pattern = Pattern.compile("[a-zA-Z]+-?[a-zA-Z]*");
+        String text = Main.readFile(filename);
+        Matcher matcher = pattern.matcher(text);
         String word;
         int index;
         WordInfo wordInfo;
@@ -87,4 +122,66 @@ public class Main {
             System.out.println(e.getWord()+" : "+e.getFrequency());
         }
     }
+
+    /**
+     * 排序
+     * @param wordInfos
+     * @return
+     */
+
+    public static int findMax (ArrayList<WordInfo> wordInfos)
+    {
+        int max=wordInfos.get(0).getFrequency();
+        for(int i=1; i<wordInfos.size();i++)
+        {
+            if( wordInfos.get(i).getFrequency() > max )
+            {
+                max = wordInfos.get(i).getFrequency();
+            }
+        }
+        return max;
+    }
+
+    public static ArrayList<WordInfo> sort( ArrayList<WordInfo>wordInfos )
+    {
+        int k = findMax(wordInfos);//temp数组zeroToMax的最大下标
+        int n = wordInfos.size()-1; //wordInfos最大下标
+
+        int[] zeroToMax = new int [k+1]; //temp数组zeroToMax
+        ArrayList<WordInfo> outputWords = new ArrayList<WordInfo> (); //输出，排序完毕的ArrayList
+        //outputWords初始化
+        for(int i=0; i<= n ;i++)
+        {
+            WordInfo aWord = new WordInfo("");
+            outputWords.add(aWord);
+        }
+        //temp数组zeroToMax初始化
+        for (int i=0; i<= k; i++)
+        {
+            zeroToMax[i] = 0;
+        }
+        //遍历wordInfos，将zeroToMax中存入当前下标表示的数的个数
+        for (int i=0; i<=n ; i++)
+        {
+            zeroToMax[wordInfos.get(i).getFrequency()] += 1;
+        }
+        //遍历zeroToMax，zeroToMax中的元素表示为，小于等于下标元素的个数
+        for (int i=1; i<= k ; i++)
+        {
+            zeroToMax[i] += zeroToMax[i-1];
+        }
+        //存入outputWords
+        for (int j=n; j>=0 ; j--)
+        {
+            int fre = wordInfos.get(j).getFrequency();
+            int index = zeroToMax[fre] -1;
+            String word = wordInfos.get(j).getWord();
+            WordInfo WI = new WordInfo(word,fre);
+            outputWords.set(index,WI);
+        }
+
+        return outputWords;
+    }
+
+
 }
