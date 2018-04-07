@@ -1,8 +1,5 @@
 package com.company;
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -11,7 +8,7 @@ import java.util.regex.Pattern;
 public class Main {
 
     public static void main(String[] args) throws Exception {
-        ArrayList<WordInfo> wordInfos=null;
+        ArrayList<WordInfo> wordInfos;
         wordInfos=Main.countFrequency("test.txt");
         Main.output(wordInfos);
     }
@@ -67,7 +64,7 @@ public class Main {
         try {
             FileReader reader = new FileReader(file);
             BufferedReader br = new BufferedReader(reader);
-            String str = "";
+            String str;
             while ((str = br.readLine()) != null) { //逐行读取文件内容，不读取换行符和末尾的空格
                 sb.append(str + "\n");
             }
@@ -77,14 +74,19 @@ public class Main {
         }
         return sb.toString();
     }
+
+    //按词频从高到低排序
+    /*public static ArrayList<WordInfo> Sort(ArrayList<WordInfo> wordInfos) {
+
+    }*/
+
+
     /**
      *输出结果
      * @author
      * @param wordInfos
      */
-    public static void output(ArrayList<WordInfo> wordInfos){
-        for (WordInfo e:wordInfos) {
-            System.out.println(e.getWord()+" : "+e.getFrequency());
-        }
+    public static void output(ArrayList<WordInfo> wordInfos) {
+
     }
 }
