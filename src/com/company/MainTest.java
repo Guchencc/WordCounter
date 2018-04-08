@@ -17,85 +17,85 @@ public class MainTest {
 
     @Test
     public void countFrequency1() throws Exception {
-        ArrayList<WordInfo> wordInfos=Main.countFrequency("testcase1.txt");
+        ArrayList<WordInfo> wordInfos=Main.countFrequency("Test/countFrequency/testcase1.txt");
         assertEquals(0,wordInfos.size());
     }
 
     @Test
     public void countFrequency2() throws Exception {
-        ArrayList<WordInfo> wordInfos=Main.countFrequency("testcase2.txt");
+        ArrayList<WordInfo> wordInfos=Main.countFrequency("Test/countFrequency/testcase2.txt");
         assertEquals(4,wordInfos.size());
     }
 
     @Test
     public void countFrequency3() throws Exception {
-        ArrayList<WordInfo> wordInfos=Main.countFrequency("testcase3.txt");
+        ArrayList<WordInfo> wordInfos=Main.countFrequency("Test/countFrequency/testcase3.txt");
         assertEquals(3,wordInfos.size());
     }
 
     @Test
     public void countFrequency4() throws Exception {
-        ArrayList<WordInfo> wordInfos=Main.countFrequency("testcase4.txt");
+        ArrayList<WordInfo> wordInfos=Main.countFrequency("Test/countFrequency/testcase4.txt");
         assertEquals(3,wordInfos.size());
     }
 
     @Test
     public void countFrequency5() throws Exception {
-        ArrayList<WordInfo> wordInfos=Main.countFrequency("testcase5.txt");
+        ArrayList<WordInfo> wordInfos=Main.countFrequency("Test/countFrequency/testcase5.txt");
         assertEquals(4,wordInfos.size());
     }
 
     @Test
     public void countFrequency6() throws Exception {
-        ArrayList<WordInfo> wordInfos=Main.countFrequency("testcase6.txt");
+        ArrayList<WordInfo> wordInfos=Main.countFrequency("Test/countFrequency/testcase6.txt");
         assertEquals(2,wordInfos.size());
     }
 
     @Test
     public void countFrequency7() throws Exception {
-        ArrayList<WordInfo> wordInfos=Main.countFrequency("testcase7.txt");
+        ArrayList<WordInfo> wordInfos=Main.countFrequency("Test/countFrequency/testcase7.txt");
         assertEquals(3,wordInfos.size());
     }
 
     @Test
     public void countFrequency8() throws Exception {
-        ArrayList<WordInfo> wordInfos=Main.countFrequency("testcase8.txt");
+        ArrayList<WordInfo> wordInfos=Main.countFrequency("Test/countFrequency/testcase8.txt");
         assertEquals(3,wordInfos.size());
     }
 
     @Test
     public void countFrequency9() throws Exception {
-        ArrayList<WordInfo> wordInfos=Main.countFrequency("testcase9.txt");
+        ArrayList<WordInfo> wordInfos=Main.countFrequency("Test/countFrequency/testcase9.txt");
         assertEquals(3,wordInfos.size());
     }
 
     @Test
     public void countFrequency10() throws Exception {
-        ArrayList<WordInfo> wordInfos=Main.countFrequency("testcase10.txt");
+        ArrayList<WordInfo> wordInfos=Main.countFrequency("Test/countFrequency/testcase10.txt");
         assertEquals(3,wordInfos.size());
     }
 
     @Test
     public void countFrequency11() throws Exception {
-        ArrayList<WordInfo> wordInfos=Main.countFrequency("testcase11.txt");
+        ArrayList<WordInfo> wordInfos=Main.countFrequency("Test/countFrequency/testcase11.txt");
         assertEquals(3,wordInfos.size());
     }
 
     @Test
     public void countFrequency12() throws Exception {
-        ArrayList<WordInfo> wordInfos=Main.countFrequency("testcase12.txt");
+        ArrayList<WordInfo> wordInfos=Main.countFrequency("Test/countFrequency/testcase12.txt");
         assertEquals(4,wordInfos.size());
     }
 
     @Test
     public void countFrequency13() throws Exception {
-        ArrayList<WordInfo> wordInfos=Main.countFrequency("testcase13.txt");
+        ArrayList<WordInfo> wordInfos=Main.countFrequency("Test/countFrequency/testcase13.txt");
         assertEquals(0,wordInfos.size());
     }
 
     @Test
     public void countFrequency14() throws Exception {
-        ArrayList<WordInfo> wordInfos=Main.countFrequency("testcase14.txt");
+        ArrayList<WordInfo> wordInfos=Main.countFrequency("Test/countFrequency/testcase14.txt");
         assertEquals(4,wordInfos.size());
     }
 

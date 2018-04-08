@@ -2,11 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c7ae6bde-53a2-4a6a-9a70-4611df31c315" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/WordCount/com/company/Main.class" afterPath="$PROJECT_DIR$/out/production/WordCount/com/company/Main.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/WordCount/com/company/MainTest.class" afterPath="$PROJECT_DIR$/out/production/WordCount/com/company/MainTest.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/result.txt" afterPath="$PROJECT_DIR$/result.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/company/Main.java" afterPath="$PROJECT_DIR$/src/com/company/Main.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/testcase1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/testcase10.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/testcase11.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/testcase12.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/testcase13.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/testcase14.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/testcase2.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/testcase3.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/testcase4.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/testcase5.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/testcase6.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/testcase7.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/testcase8.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/testcase9.txt" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/company/MainTest.java" afterPath="$PROJECT_DIR$/src/com/company/MainTest.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -23,7 +32,7 @@
         <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="946">
-              <caret line="43" column="55" lean-forward="true" selection-start-line="43" selection-start-column="55" selection-end-line="43" selection-end-column="55" />
+              <caret line="43" column="55" lean-forward="false" selection-start-line="43" selection-start-column="55" selection-end-line="43" selection-end-column="55" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -34,8 +43,8 @@
       <file leaf-file-name="MainTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/company/MainTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+            <state relative-caret-position="93">
+              <caret line="48" column="16" lean-forward="false" selection-start-line="48" selection-start-column="16" selection-end-line="48" selection-end-column="16" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -193,7 +202,7 @@
       <envs />
       <patterns />
     </configuration>
-    <configuration name="MainTest.countFrequency11" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="MainTest.countFrequency1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
           <option name="PATTERN" value="com.company.*" />
@@ -205,7 +214,7 @@
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="com.company" />
       <option name="MAIN_CLASS_NAME" value="com.company.MainTest" />
-      <option name="METHOD_NAME" value="countFrequency11" />
+      <option name="METHOD_NAME" value="countFrequency1" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -375,19 +384,19 @@
       <listeners />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="JUnit.MainTest.countFrequency11" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.MainTest.countFrequency12" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.MainTest.countFrequency13" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.MainTest.countFrequency14" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.MainTest" />
+      <item index="0" class="java.lang.String" itemvalue="JUnit.MainTest.countFrequency12" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.MainTest.countFrequency13" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.MainTest.countFrequency14" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.MainTest" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.MainTest.countFrequency1" />
     </list>
     <recent_temporary>
       <list size="5">
         <item index="0" class="java.lang.String" itemvalue="JUnit.MainTest" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.MainTest.countFrequency14" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.MainTest.countFrequency13" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.MainTest.countFrequency12" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.MainTest.countFrequency11" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.MainTest.countFrequency1" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.MainTest.countFrequency14" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.MainTest.countFrequency13" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.MainTest.countFrequency12" />
       </list>
     </recent_temporary>
   </component>
@@ -401,7 +410,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1523168204750</updated>
-      <workItem from="1523168206041" duration="11433000" />
+      <workItem from="1523168206041" duration="11692000" />
     </task>
     <servers />
   </component>
@@ -409,20 +418,20 @@
     <history-entry file="MainTest - 2018.04.08 at 17h 31m 02s.xml">
       <configuration name="MainTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="MainTest_countFrequency10 - 2018.04.08 at 17h 25m 21s.xml">
-      <configuration name="MainTest.countFrequency10" configurationId="JUnit" />
+    <history-entry file="MainTest - 2018.04.08 at 17h 40m 51s.xml">
+      <configuration name="MainTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="MainTest_countFrequency10 - 2018.04.08 at 17h 25m 33s.xml">
-      <configuration name="MainTest.countFrequency10" configurationId="JUnit" />
+    <history-entry file="MainTest_countFrequency1 - 2018.04.08 at 17h 39m 38s.xml">
+      <configuration name="MainTest.countFrequency1" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="MainTest_countFrequency11 - 2018.04.08 at 17h 26m 24s.xml">
-      <configuration name="MainTest.countFrequency11" configurationId="JUnit" />
+    <history-entry file="MainTest_countFrequency1 - 2018.04.08 at 17h 40m 00s.xml">
+      <configuration name="MainTest.countFrequency1" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="MainTest_countFrequency11 - 2018.04.08 at 17h 26m 50s.xml">
-      <configuration name="MainTest.countFrequency11" configurationId="JUnit" />
+    <history-entry file="MainTest_countFrequency1 - 2018.04.08 at 17h 40m 08s.xml">
+      <configuration name="MainTest.countFrequency1" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="MainTest_countFrequency12 - 2018.04.08 at 17h 27m 53s.xml">
-      <configuration name="MainTest.countFrequency12" configurationId="JUnit" />
+    <history-entry file="MainTest_countFrequency1 - 2018.04.08 at 17h 40m 19s.xml">
+      <configuration name="MainTest.countFrequency1" configurationId="JUnit" />
     </history-entry>
     <history-entry file="MainTest_countFrequency12 - 2018.04.08 at 17h 28m 01s.xml">
       <configuration name="MainTest.countFrequency12" configurationId="JUnit" />
@@ -438,7 +447,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11433000" />
+    <option name="totallyTimeSpent" value="11692000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
@@ -453,7 +462,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17094973" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15418994" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -646,7 +655,7 @@
     <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="946">
-          <caret line="43" column="55" lean-forward="true" selection-start-line="43" selection-start-column="55" selection-end-line="43" selection-end-column="55" />
+          <caret line="43" column="55" lean-forward="false" selection-start-line="43" selection-start-column="55" selection-end-line="43" selection-end-column="55" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -655,8 +664,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/MainTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        <state relative-caret-position="93">
+          <caret line="48" column="16" lean-forward="false" selection-start-line="48" selection-start-column="16" selection-end-line="48" selection-end-column="16" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
