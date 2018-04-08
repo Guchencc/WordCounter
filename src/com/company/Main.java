@@ -14,7 +14,7 @@ public class Main {
     }
 
     /**
-     * 输入验证
+     * 杈撳叆楠岃瘉
      * @author
      * @param args
      */
@@ -23,7 +23,7 @@ public class Main {
     }
 
     /**
-     * 词频统计
+     * 璇嶉缁熻
      * @author
      * @param filename
      * @return ArrayList<WordInfo>
@@ -65,28 +65,45 @@ public class Main {
             FileReader reader = new FileReader(file);
             BufferedReader br = new BufferedReader(reader);
             String str;
-            while ((str = br.readLine()) != null) { //逐行读取文件内容，不读取换行符和末尾的空格
+            while ((str = br.readLine()) != null) { //閫愯璇诲彇鏂囦欢鍐呭锛屼笉璇诲彇鎹㈣绗﹀拰鏈熬鐨勭┖鏍�
                 sb.append(str + "\n");
             }
             br.close();
         }catch (IOException e){
-            System.out.println("读取文件失败！");
+            System.out.println("璇诲彇鏂囦欢澶辫触锛�");
         }
         return sb.toString();
     }
 
-    //按词频从高到低排序
+    //鎸夎瘝棰戜粠楂樺埌浣庢帓搴�
     /*public static ArrayList<WordInfo> Sort(ArrayList<WordInfo> wordInfos) {
 
     }*/
 
 
     /**
-     *输出结果
+     *杈撳嚭缁撴灉
      * @author
      * @param wordInfos
      */
     public static void output(ArrayList<WordInfo> wordInfos) {
-
+        File file=new File("result.txt");
+        String str="";
+        try {
+            FileWriter fw = new FileWriter(file, true);
+            PrintWriter pw = new PrintWriter(fw);
+            if (!file.exists())
+                if (!file.createNewFile())
+                    System.out.println("创建统计文件失败!");
+            int size=wordInfos.size();
+            int n=size>100?100:size;
+            for (int i=0;i<n;i++)
+                str=str+wordInfos.get(i).getWord()+" "+wordInfos.get(i).getFrequency()+"\r\n";
+            pw.write(str);
+            pw.close();
+            fw.close();
+        }catch (IOException e) {
+            System.out.println("统计结果写入文件失败！");
+        }
     }
 }
