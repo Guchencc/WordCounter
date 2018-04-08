@@ -10,7 +10,7 @@
     <orderEntry type="module-library">
       <library>
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/junit-4.12.jar!/" />
+          <root url="jar://$MODULE_DIR$/junit-4.9.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />

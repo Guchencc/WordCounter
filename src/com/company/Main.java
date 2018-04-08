@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-
 public class Main {
 
     public static void main(String[] args) throws Exception {
@@ -87,6 +86,24 @@ public class Main {
      * @param wordInfos
      */
     public static void output(ArrayList<WordInfo> wordInfos) {
+    	 File file=new File("result.txt");
+         String str="";
+         try {
+             FileWriter fw = new FileWriter(file, true);
+             PrintWriter pw = new PrintWriter(fw);
+             if (!file.exists())
+                 if (!file.createNewFile())
+                     System.out.println("创建统计文件失败!");
+             int size=wordInfos.size();
+             int n=size>100?100:size;
+             for (int i=0;i<n;i++)
+                 str=str+wordInfos.get(i).getWord()+" "+wordInfos.get(i).getFrequency()+"\r\n";
+             pw.write(str);
+             pw.close();
+             fw.close();
+         }catch (IOException e) {
+             System.out.println("统计结果写入文件失败！");
+         }
 
     }
 }
