@@ -31,6 +31,9 @@ public class Main {
         ArrayList<WordInfo> wordInfos=new ArrayList<>();
         Pattern pattern=Pattern.compile("[a-zA-Z]+-?[a-zA-Z]*");
         String text=Main.readFile(filename);
+        if (text==null){
+            return null;
+        }
         Matcher matcher=pattern.matcher(text);
         String word;
         int index;
@@ -68,10 +71,11 @@ public class Main {
                 sb.append(str + "\n");
             }
             br.close();
+            return sb.toString();
         }catch (IOException e){
             System.out.println("读取文件失败！");
         }
-        return sb.toString();
+        return null;
     }
 
     //按词频从高到低排序
