@@ -144,7 +144,7 @@ public class Main {
         return max;
     }
 
-    public static ArrayList<WordInfo> sort( ArrayList<WordInfo>wordInfos )
+    public static ArrayList<WordInfo> sort( ArrayList<WordInfo> wordInfos )
     {
         int k = findMax(wordInfos);//temp数组zeroToMax的最大下标
         int n = wordInfos.size()-1; //wordInfos最大下标
@@ -183,6 +183,34 @@ public class Main {
         }
 
         return outputWords;
+    }
+
+    public static void swap( ArrayList<WordInfo> wordInfos, int i, int j )
+    {
+        int fre = wordInfos.get(i).getFrequency();
+        String word = wordInfos.get(i).getWord();
+        WordInfo tempWI =new WordInfo (word,fre);
+
+        wordInfos.set(i,wordInfos.get(j));
+        wordInfos.set(j,tempWI);
+    }
+
+    public static void linearSort( ArrayList<WordInfo> wordInfos )
+    {
+        int i=0;
+        WordInfo nowWordInfo = wordInfos.get(i);
+        for (int j=1; j<wordInfos.size(); j++)
+        {
+            if (nowWordInfo.getFrequency() == wordInfos.get(j).getFrequency() )
+            {
+                if(nowWordInfo.getWord().compareTo(wordInfos.get(j).getWord()) > 0 )
+                {
+                    swap(wordInfos,i,j);
+                    i = j;
+                    nowWordInfo = wordInfos.get(i);
+                }
+            }
+        }
     }
 
 
