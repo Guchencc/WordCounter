@@ -155,5 +155,4 @@ public class MainTest {
     @Test
     public void output() throws Exception {
     }
-
 }

@@ -56,22 +56,22 @@ public class Main {
      */
     public static ArrayList<WordInfo> countFrequency(String filename) {
         ArrayList<WordInfo> wordInfos=new ArrayList<>();
-        Pattern pattern=Pattern.compile("[a-zA-Z]+-?[a-zA-Z]*");
-        String text=Main.readFile(filename);
+        Pattern pattern=Pattern.compile("[a-zA-Z]+-?[a-zA-Z]*");    //定义单词的正则表达式
+        String text=Main.readFile(filename);    //调用readFile（）读取文本内容赋值给text
         if (text==null){
             return null;
         }
-        Matcher matcher=pattern.matcher(text);
+        Matcher matcher=pattern.matcher(text);  //利用之前定义的单词正则表达式匹配text中的单词
         String word;
         int index;
         WordInfo wordInfo;
-        while(matcher.find()) {
-            word=matcher.group().toLowerCase();
-            if (word.endsWith("-"))
+        while(matcher.find()) {     //如果匹配到单词则进入循环处理
+            word=matcher.group().toLowerCase();     //将匹配到的单词赋值给word
+            if (word.endsWith("-"))     //如果匹配到“单词-”情况，则去除符号“-”
                 word=word.substring(0,word.length()-1);
-            if ((index=Main.hasWord(wordInfos,word))!=-1) {
+            if ((index=Main.hasWord(wordInfos,word))!=-1) {     //如果动态数组wordInfos中已经有该单词，则将频数加一
                 wordInfos.get(index).setFrequency(wordInfos.get(index).getFrequency()+1);
-            }else{
+            }else{      //如果动态数组wordInfos中无该单词，则将该单词加入动态数组
                 wordInfo=new WordInfo(word, 1);
                 wordInfos.add(wordInfo);
             }
@@ -79,7 +79,7 @@ public class Main {
         return wordInfos;
     }
 
-    public static int hasWord(ArrayList<WordInfo> wordInfos, String word) {
+    public static int hasWord(ArrayList<WordInfo> wordInfos, String word) {     //判断word是否存在于动态数组wordInfos中，若存在则返回位置，负责返回-1
         for (WordInfo wordInfo:wordInfos){
             if (wordInfo.getWord().equals(word.trim().toLowerCase()))
                 return wordInfos.indexOf(wordInfo);
@@ -87,7 +87,7 @@ public class Main {
         return -1;
     }
 
-    public static String readFile(String filename) {
+    public static String readFile(String filename) {    //读取filename文本文件
         File file=new File(filename);
         StringBuilder sb = new StringBuilder();
         try {
