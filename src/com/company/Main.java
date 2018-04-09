@@ -1,6 +1,7 @@
 package com.company;
 import java.io.*;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -9,7 +10,13 @@ public class Main {
     public static void main(String[] args) throws Exception {
         ArrayList<WordInfo> wordInfos;
         wordInfos=Main.countFrequency("test.txt");
-        Main.output(wordInfos);
+
+
+        String aStr = "ab";
+        aStr = inputValidate(args);
+        System.out.println(aStr);
+
+        Main.output(sort(wordInfos));
     }
 
     /**
@@ -17,34 +24,32 @@ public class Main {
      * @author
      * @param args
      */
-    public static String InputValidate(String[] args)
+    public static String inputValidate(String[] args)
     {
-        String param ="";
-        int fileNum=0;
-        for (int i=0; i<args.length; i++)
+        String param =null;
+        if(args.length == 1)
         {
-            if ( args[i].matches("\\*[.](txt)$") )
+            if(args[0].length()>4 && args[0].indexOf(".txt")!=-1)
             {
-                param = args[i];
-                fileNum++;
+                param = args[0];
+                File file = new File(param);
+                if(!file.exists())
+                {
+                    System.out.println("输入文件不存在，请检查并确认");
+                    param = null;
+                }
             }
             else
             {
-                System.out.println("请按照要求输入参数，*.txt !");
-                return "";
+                System.out.println("请检查输入文件是否为*.txt格式");
             }
-
-        }
-        if( fileNum == 1)
-        {
-            return param;
         }
         else
         {
-            System.out.println("输入文件数量不为一，请检查并重新输入！");
-            return "";
+            System.out.println("输入文件不为1，请检查并重新输入");
         }
 
+        return param;
     }
 
 
@@ -164,11 +169,31 @@ public class Main {
             temp[fre] = temp[fre] -1 ;
         }
 
+        Collections.reverse(outputWords);
+        for (int i=0;i<outputWords.size()-1;i++)
+        {
+            for(int j=i; j<outputWords.size()-1;j++)
+            {
+                if (outputWords.get(j).getFrequency() ==outputWords.get(j+1).getFrequency())
+                {
+                    if (outputWords.get(j).getWord().compareTo(outputWords.get(j+1).getWord()) > 0)
+                    {
+                        swap(outputWords,j,j+1);
+                    }
+                }
+            }
+        }
+
         return outputWords;
     }
 
     public static void swap( ArrayList<WordInfo> wordInfos, int i, int j )
     {
+        if ( i<0 || j<0 || i>=wordInfos.size() || j>= wordInfos.size() )
+        {
+            System.out.println("边界出错，请注意交换位置的边界");
+            return;
+        }
         int fre = wordInfos.get(i).getFrequency();
         String word = wordInfos.get(i).getWord();
         WordInfo tempWI =new WordInfo (word,fre);
@@ -176,25 +201,6 @@ public class Main {
         wordInfos.set(i,wordInfos.get(j));
         wordInfos.set(j,tempWI);
     }
-
-    // public static void linearSort( ArrayList<WordInfo> wordInfos )
-    // {
-    //     int i=0;
-    //     WordInfo nowWordInfo = wordInfos.get(i);
-    //     for (int j=1; j<wordInfos.size(); j++)
-    //     {
-    //         if (nowWordInfo.getFrequency() == wordInfos.get(j).getFrequency() )
-    //         {
-    //             if(nowWordInfo.getWord().compareTo(wordInfos.get(j).getWord()) > 0 )
-    //             {
-    //                 swap(wordInfos,i,j);
-    //                 i = j;
-    //                 nowWordInfo = wordInfos.get(i);
-    //             }
-    //         }
-    //     }
-    // }
-
 
 
     /**
